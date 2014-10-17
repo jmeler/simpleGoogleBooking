@@ -28,4 +28,4 @@ Sistema de reserves simple que funciona amb Google Forms i Google Calendar.
 <li>Anar a la opció del menú <strong>Recursos</strong> | <strong>Disparadors del projecte actual</strong> i afegir un disparador per la funció <strong>UpdateCalendarAndSendMail</strong> amb esdeveniments <strong>Del full de càlcul / Enviament del formulari</strong>
 <li>Inserir el codi d'inserció del formulari i del calendari a la vostra pàgina.
 
-**Demostració:** http://agora.xtec.cat/nodes/reserva-de-recursos
+**Demostració i instruccions més detallades:** http://agora.xtec.cat/nodes/reserva-de-recursos
