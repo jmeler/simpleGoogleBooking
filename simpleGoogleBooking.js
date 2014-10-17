@@ -2,17 +2,23 @@
 Un petit script per generar events en un calendari automàticament a partir de l'enviament d'un formulari.
 Comprova si hi ha solapament amb un event amb el mateix recurs i envia un correu amb el resultat de la reserva (OK, No disponible)
 Author: Xavi Meler (jmeler@xtec.cat) 
+
+Una plantilla del formulari i full de càlcul associat que podeu copiar és:
+https://docs.google.com/spreadsheets/d/1g1uTnMcTmLtXHnPn5gC_5EuuW-sPr8y_AzIzIPzEL_s/edit?usp=sharing
+
 */
 
 function updateCalendarAndSendMail(e) {
   
-  // Fiqueu aquí el vostre identificador de calendari. 
-  var idcalendar='ID_CALENDARI'; 
-  
+  // Obtenim el id del calendari del segon full (Configuració)
+  var full_actiu = SpreadsheetApp.getActiveSpreadsheet();
+  SpreadsheetApp.setActiveSheet(full_actiu.getSheets()[1]);
+  var data = full_actiu.getDataRange().getValues();
+  var idcalendar = data[0][1]; 
+ 
   var url='https://www.google.com/calendar/render?cid='+idcalendar;
   
   // Recuperem les dades del full de càlcul
-  
   var timestamp = e.values[0];
   var destinatari = e.values[1];
   var recurs = e.values[2]; 
