@@ -12,8 +12,9 @@ function updateCalendarAndSendMail(e) {
   var url='https://www.google.com/calendar/render?cid='+idcalendar;
   
   // Recuperem les dades del full de càlcul
-  var destinatari = e.values[0];
-  var timestamp = e.values[1];
+  
+  var timestamp = e.values[0];
+  var destinatari = e.values[1];
   var recurs = e.values[2]; 
   var euro_dia = e.values[3];
   var hora_fin = e.values[4];
