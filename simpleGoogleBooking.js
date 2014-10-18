@@ -10,7 +10,7 @@ https://docs.google.com/spreadsheets/d/1KLZQ1h7yh7IJQoCl3raRfsuWmI6ERmYaFJRU9LE9
 
 function updateCalendarAndSendMail(e) {
   
-  // Obtenim les dades de configuració
+  // Obtenim les dades de configuració 
   var full_configuracio = SpreadsheetApp.getActiveSpreadsheet();
   SpreadsheetApp.setActiveSheet(full_configuracio.getSheets()[1]);
   var data = full_configuracio.getDataRange().getValues();
@@ -18,7 +18,7 @@ function updateCalendarAndSendMail(e) {
  
   var url='https://www.google.com/calendar/render?cid='+idcalendar;
   
-  // Recuperem les dades del full de càlcul
+  // Recuperem les dades de l'enviament del formulari
   var timestamp = e.values[0];
   var destinatari = e.values[1];
   var recurs = e.values[2]; 
