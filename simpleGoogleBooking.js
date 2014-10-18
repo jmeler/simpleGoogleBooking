@@ -3,7 +3,8 @@ Un petit script per generar events en un calendari automàticament a partir de l
 Comprova si hi ha solapament amb un event amb el mateix recurs i envia un correu amb el resultat de la reserva (OK, No disponible)
 Author: Xavi Meler (jmeler@xtec.cat) 
 
-Aquest script funciona amb un formulari i el seu full de càlcul associat. Aquí teniu una plantilla que heu de copiar en el vostre espai Google.
+Aquest script funciona amb un formulari i el seu full de respostes associat. 
+Aquí teniu una plantilla que heu de copiar en el vostre espai Google:
 https://docs.google.com/spreadsheets/d/1I64dAuDxKYxuvprbZtgDIAcXR57Q0Ad_u_C4AG6Qy-0/edit?usp=sharing
 
 */
