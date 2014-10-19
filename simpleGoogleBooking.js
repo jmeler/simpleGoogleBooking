@@ -1,6 +1,10 @@
 /*
-Un script per generar events en un calendari automàticament a partir de l'enviament d'un formulari.
+Un petit script per generar events en un calendari automàticament a partir de l'enviament d'un formulari.
 Comprova si hi ha solapament amb un event amb el mateix recurs i envia un correu amb el resultat de la reserva (OK, No disponible)
+
+Aquest document és un model i inclou el script:
+https://docs.google.com/spreadsheets/d/1I64dAuDxKYxuvprbZtgDIAcXR57Q0Ad_u_C4AG6Qy-0/edit?usp=sharing
+
 Author: Xavi Meler (jmeler@xtec.cat) 
 */
 
@@ -14,7 +18,8 @@ function onOpen(){
 
 /* 
 Escriu l'identificador del formulari en una cella (necessari per generar el codi embed del formulari) i crea un disparador
-que genera un event al calendari per cada reserva enviada.*/
+que provoca la inserció d'un event en el calendari per cada formulari enviat.
+*/
 function activate(){
  
   var full_configuracio = SpreadsheetApp.getActiveSpreadsheet();
@@ -22,7 +27,7 @@ function activate(){
   
   var idForm= full_configuracio.getFormUrl();
   
-  full_configuracio.getRange('B8').setValue(idForm);
+  full_configuracio.getRange('B6').setValue(idForm);
   
   var data = full_configuracio.getDataRange().getValues();
   var idcalendar = data[0][1]; 
@@ -38,6 +43,7 @@ function activate(){
 }
 
 // Crea un event en el calendari definit en una cella i envia un email amb el resultat de la reserva 
+
 function createCalendarEvent(e) {
   
   // Obtenim les dades de configuració
